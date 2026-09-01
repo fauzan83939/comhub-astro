@@ -1,0 +1,47 @@
+---
+---
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span class="pulse"></span> Community-run, always open</span>
+      <h1>Where the Rialo community actually gets things done together</h1>
+      <p class="lead">ComHub is where players, builders, and early supporters gather to play games, share ideas, and explore what's possible with Rialo.</p>
+      <div class="btn-row">
+        <a class="btn-primary" href="#join">Join the community</a>
+        <a class="btn-ghost" href="#activities">See what's happening</a>
+      </div>
+    </div>
+
+    <div class="hero-panel">
+      <div class="panel-head"><span>COMMUNITY FEED</span><span>Live</span></div>
+      <div class="status-line"><span class="dot"></span> <strong>New quest</strong> posted in #activities</div>
+      <div class="status-line"><span class="dot"></span> <strong>COMI</strong> answered 12 questions today</div>
+      <div class="status-line"><span class="dot"></span> <strong>Builder session</strong> wrapped up — notes shared</div>
+      <div class="status-line"><span class="dot"></span> <strong>3 new members</strong> joined this hour</div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .hero { padding: 90px 0 70px; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center; }
+  @media (max-width: 860px) { .hero .wrap { grid-template-columns: 1fr; } }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px; font-size: 13px; color: var(--accent);
+    background: var(--accent-soft); border: 1px solid rgba(16,185,129,0.25);
+    padding: 6px 14px; border-radius: 100px; margin-bottom: 22px;
+  }
+  .eyebrow .pulse { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 1.6s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+  .hero h1 { font-size: 44px; margin: 0 0 18px; max-width: 560px; }
+  .hero p.lead { font-size: 17px; color: var(--text-dim); max-width: 480px; margin-bottom: 32px; }
+  .btn-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary { background: var(--accent); color: #04140e; font-weight: 600; padding: 13px 24px; border-radius: 10px; font-size: 15px; }
+  .btn-ghost { border: 1px solid var(--border); color: var(--text); padding: 13px 24px; border-radius: 10px; font-size: 15px; }
+  .hero-panel { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 22px; }
+  .hero-panel .panel-head { display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--text-dim); margin-bottom: 16px; }
+  .status-line { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-dim); padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .status-line:last-child { border-bottom: none; }
+  .status-line .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .status-line strong { color: var(--text); font-weight: 500; }
+</style>

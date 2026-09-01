@@ -1,0 +1,35 @@
+---
+const items = [
+  { icon: "🎮", title: "Play & compete", desc: "Community games and quests with rewards, built and run by members.", href: null },
+  { icon: "💬", title: "Ask COMI anything", desc: "Our AI guide answers questions about Rialo, the community, and how things work — day or night.", href: null },
+  { icon: "🛠️", title: "Build together", desc: "Regular builder sessions for sharing knowledge, tools, and ideas around Rialo.", href: null },
+];
+---
+<section id="activities">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What you can do here</h2>
+      <p>ComHub isn't just a chat room — it's a place with actual things to do.</p>
+    </div>
+    <div class="grid-3">
+      {items.map((item) => (
+        item.href
+          ? <a class="card" href={item.href}><div class="icon">{item.icon}</div><h3>{item.title}</h3><p>{item.desc}</p></a>
+          : <div class="card"><div class="icon">{item.icon}</div><h3>{item.title}</h3><p>{item.desc}</p></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  section { padding: 70px 0; }
+  .section-head { max-width: 560px; margin-bottom: 44px; }
+  .section-head h2 { font-size: 30px; margin: 0 0 12px; }
+  .section-head p { color: var(--text-dim); font-size: 16px; margin: 0; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 860px) { .grid-3 { grid-template-columns: 1fr; } }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 26px; display: block; }
+  .card .icon { width: 40px; height: 40px; border-radius: 10px; background: var(--accent-soft); display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px; }
+  .card h3 { font-size: 17px; margin: 0 0 8px; }
+  .card p { font-size: 14px; color: var(--text-dim); margin: 0; }
+</style>

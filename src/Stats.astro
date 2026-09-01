@@ -1,0 +1,28 @@
+---
+const stats = [
+  { num: "2.4K+", label: "Members" },
+  { num: "150+", label: "Builder sessions" },
+  { num: "24/7", label: "COMI online" },
+  { num: "100%", label: "Community-run" },
+];
+---
+<section>
+  <div class="wrap">
+    <div class="stats-band">
+      {stats.map((s) => (
+        <div class="stat"><div class="num">{s.num}</div><div class="label">{s.label}</div></div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  section { padding: 70px 0; }
+  .stats-band {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 18px;
+    padding: 34px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
+  }
+  @media (max-width: 720px) { .stats-band { grid-template-columns: repeat(2, 1fr); } }
+  .stat .num { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; color: var(--accent); }
+  .stat .label { font-size: 13px; color: var(--text-dim); margin-top: 4px; }
+</style>
